@@ -172,3 +172,10 @@ html[data-ui="en"] [data-tr] { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 @media print { .top, .foot, .tools, .cite-actions, .lang { display: none; } }
+
+/* maker credit: one quiet line under the footer */
+.credit { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 16px; }
+.credit-in { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; font-size: 13px; color: var(--mute); }
+.credit p { margin: 0; max-width: 60ch; }
+.credit a { color: var(--mute); font-weight: 600; text-decoration-color: var(--line); }
+.credit a:hover { color: var(--lake); }

@@ -314,7 +314,11 @@ def footer():
 <nav class="foot-links">{links}</nav>
 <p class="fine">{bi("Dosyalar yazarın paylaşılabilir sürümleridir. Atıf için yayımlanmış künyeyi kullanın.", "Files are the author's shareable versions. Please cite the published record.")}
 <a href="/yayinlar.json">JSON</a>, <a href="/yayinlar.bib">BibTeX</a></p>
-</div></footer>"""
+</div>
+<div class="credit"><div class="wrap credit-in">
+<p>{bi("Bu arşiv VuMaTech tarafından tasarlandı ve yazıldı. Akademisyenler için yayın arşivi, kişisel site ve dergi sitesi kuruyoruz.", "Designed and built by VuMaTech. We build publication archives, personal websites and journal sites for academics.")}</p>
+<a href="https://vumatech.net/?utm_source=yayin.mahmutvural.net&amp;utm_medium=footer" rel="noopener">vumatech.net</a>
+</div></div></footer>"""
 
 
 def main():
