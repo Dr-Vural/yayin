@@ -1,0 +1,4 @@
+site/
+__pycache__/
+data/panel_yayinlar.json
+data/pdf_map.json
