@@ -22,6 +22,8 @@ PROFILES = [
     ("CV", "https://cv.mahmutvural.net"),
 ]
 TODAY = date.today().isoformat()
+import hashlib
+ASSET_V = hashlib.sha1(b"".join((ROOT / "assets" / f).read_bytes() for f in ("site.css", "site.js"))).hexdigest()[:8]
 
 TR2 = str.maketrans({"ı": "i", "İ": "i", "ş": "s", "Ş": "s", "ğ": "g", "Ğ": "g",
                      "ü": "u", "Ü": "u", "ö": "o", "Ö": "o", "ç": "c", "Ç": "c", "â": "a"})
@@ -280,13 +282,13 @@ def page(title, desc, canonical, body, head_extra="", lang="tr", og_image=None):
 <meta name="theme-color" content="#1F4E73">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 {FONTS}
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={ASSET_V}">
 {head_extra}
 </head>
 <body>
 <a class="skip" href="#main"><span data-tr>İçeriğe geç</span><span data-en>Skip to content</span></a>
 {body}
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 """
